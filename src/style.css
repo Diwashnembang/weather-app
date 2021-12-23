@@ -1,0 +1,41 @@
+
+/* variable */
+:root {
+  --white: #c1c1c1;
+  --border:rgba(0, 0, 0, .5);
+  --buttonColor:rgba(255,165,0,0.85);
+}
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+    background: url("./assets/background/bg.jpg");
+    background-repeat : no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+    color:white; 
+    margin: 5rem 5rem 0rem 5rem;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    min-height: 55vh;
+    flex-wrap: wrap;
+}
+#image{
+    /* font-size: 15rem; */
+    color:black;
+} 
+
+#bottom{
+  display: flex;
+  min-height: 30vh;
+  flex-wrap: wrap;
+}

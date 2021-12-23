@@ -1,4 +1,7 @@
+/* eslint-disable new-cap */
 const path = require('path');
+
+const htmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -38,4 +41,12 @@ module.exports = {
       },
     ],
   },
+  plugins:
+    [
+      new htmlWebpackPlugin({
+        template: './src/index.html',
+        inject: 'body', // where to put your script if body last of body will be script
+      }),
+    ],
+
 };

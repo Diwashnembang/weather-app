@@ -1,20 +1,34 @@
-async function getData() {
+async function currentWeather() {
   try {
     const response = await fetch(
-      'https://api.openweathermap.org/data/2.5/weather?q=London%2Cuk&appid=78650a89fccd93f56814e9bef59802c3&fbclid=IwAR1gF3TXvgxoZgQqpoFFvRonBMUCvehGb1JoI5obR3Qqx8Lt1cLjPxwclcQ',
+      'https://api.openweathermap.org/data/2.5/weather?q=kathmandu&appid=78650a89fccd93f56814e9bef59802c3&fbclid=IwAR1gF3TXvgxoZgQqpoFFvRonBMUCvehGb1JoI5obR3Qqx8Lt1cLjPxwclcQ',
       {
         mode: 'cors',
         method: 'get',
       },
     );
     const data = await response.json();
-    console.log(data);
     return data;
   } catch (err) {
     console.log(err);
-    return 0;
+    return err;
   }
 }
-
-// eslint-disable-next-line import/prefer-default-export
-export { getData };
+const oneCall = async (lat, lon) => {
+  try {
+    const apiCall = new Request(
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude={part}&appid=78650a89fccd93f56814e9bef59802c3`,
+      {
+        mode: 'cors',
+        method: 'get',
+      },
+    );
+    const response = await apiCall;
+    const data = await response.json();
+    return data;
+  } catch (err) {
+    console.log(err);
+    return err;
+  }
+};
+export { currentWeather, oneCall };
