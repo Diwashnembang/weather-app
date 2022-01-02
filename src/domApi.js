@@ -19,4 +19,16 @@ const renderImage = (code, divReference) => {
   node.src = `https://openweathermap.org/img/wn/${code}@2x.png`;
   return node;
 };
-export { renderText, renderImage };
+
+const hideDiv = (refernece) => {
+  const div = document.querySelector(refernece);
+  div.classList.add('hidden');
+};
+const unhideDiv = (refernece) => {
+  const div = document.querySelector(refernece);
+  console.log(div)
+  div.classList.remove('hidden');
+};
+export {
+  renderText, renderImage, hideDiv, unhideDiv,
+};

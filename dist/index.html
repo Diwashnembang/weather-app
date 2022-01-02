@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <script src="https://kit.fontawesome.com/14bfb22525.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/14bfb22525.js" crossorigin="anonymous"></script> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
@@ -25,8 +27,13 @@
             <div class="search">
                 <div class="search-city">
                     <input type="text" name="city" id="city-finder">
+                    <div id="search">
+                        <span class="material-icons-outlined">
+                            search
+                        </span>
+                    </div>
                 </div>
-                <div class="error-message">this is error</div>
+                <div class="error-message hidden">this is error</div>
 
             </div>
         </section>
@@ -49,7 +56,7 @@
                     <div class="humidity-data">10 *C</div>
                 </div>
             </div>
-           
+
 
             </div>
             <div class="Wind Speed">
@@ -66,7 +73,6 @@
     </main>
 
     <aside id="bottom">
-        <div id="mode"></div>
         <div class="weekly-forecast">
             <div class="day">Sunday</div>
             <div class="day-forecast">10 *c</div>
