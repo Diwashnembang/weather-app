@@ -6,7 +6,7 @@ import './style.css';
 
 const moment = require('moment-timezone');
 
-const metric = true;
+let metric = true;
 
 function capitalize(sentence) {
   if (typeof sentence !== 'string') return console.log('error');
@@ -37,7 +37,7 @@ async function main(location) {
   const unit = (metric) ? { temperature: '°C', windspeed: 'KM/h' } : { temperature: '°F', windspeed: 'mph' };
   try {
     const current = await currentWeather(location);
-    const oneCallData = await oneCall(current.coord.lat, current.coord.lon);
+    const oneCallData = await oneCall(current.coord.lat, current.coord.lon, metric);
     const city = renderText(current.name, '.city');
     const description = renderText(capitalize(oneCallData.current.weather[0].description), '.description');
     const img = renderImage(oneCallData.current.weather[0].icon, '#image');
@@ -104,3 +104,11 @@ input.addEventListener('keydown', (e) => {
   if (e.key !== 'Enter') return;
   searchCity();
 });
+
+const changeMertic = document.querySelector('.change-metric');
+changeMertic.onclick = async () => {
+  const city = document.querySelector('.city');
+  metric = !(metric);
+  await main(city.textContent);
+  changeMertic.textContent = (metric) ? capitalize('Change to Fahrenheit') : capitalize('Change to celsius');
+};

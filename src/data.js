@@ -1,7 +1,7 @@
 async function currentWeather(place) {
   try {
     const city = place || 'kathmandu';
-    console.log(city)
+    console.log(city);
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=78650a89fccd93f56814e9bef59802c3&fbclid=IwAR1gF3TXvgxoZgQqpoFFvRonBMUCvehGb1JoI5obR3Qqx8Lt1cLjPxwclcQ`,
       {
@@ -16,11 +16,11 @@ async function currentWeather(place) {
     return err;
   }
 }
-const oneCall = async (lat, lon) => {
+const oneCall = async (lat, lon, isMetric) => {
   try {
-    console.log(lat, lon);
+    const unit = (isMetric) ? 'metric' : 'imperial';
     const apiCall = new Request(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&appid=78650a89fccd93f56814e9bef59802c3`,
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=${unit}&appid=78650a89fccd93f56814e9bef59802c3`,
       {
         mode: 'cors',
         method: 'get',

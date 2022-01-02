@@ -58,9 +58,8 @@ main{
 .change-metric{
   font-size: 1rem;
 }
-.change-metric a{
-  color: white;
-  text-decoration: none;
+.change-metric {
+  cursor: pointer;
 }
 
 .image{
