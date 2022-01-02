@@ -1,9 +1,10 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 /* variable */
 :root {
   --white: #c1c1c1;
   --border:rgba(0, 0, 0, .5);
   --buttonColor:rgba(255,165,0,0.85);
+  --primary-font: 'Poppins', sans-serif;
 }
 
 /* reset */
@@ -16,12 +17,27 @@
 
 body{
     background: url("./assets/background/bg.jpg");
+     /* background: url("./assets/background/bg.jpg"); */
     background-repeat : no-repeat;
     background-size: cover;
     background-attachment: fixed; 
     color:white; 
-    margin: 5rem 5rem 0rem 5rem;
+    font-family: var(--primary-font);
+    font-size: 1.6rem;
 }
+
+#over-lay{
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+main,aside{
+  padding: 5rem 5rem 0rem 5rem;;
+}
+
 
 main{
     display: flex;
@@ -29,11 +45,37 @@ main{
     min-height: 55vh;
     flex-wrap: wrap;
 }
-#image{
-    /* font-size: 15rem; */
-    color:black;
-} 
+.description{
+  font-size: 2.3rem;
+}
 
+.city{
+  font-size: 1.3rem;
+}
+.date{
+  font-size: 1rem;
+}
+.time{
+  font-size: 1rem;
+}
+.temperature{
+  font-size: 4rem;
+}
+.change-metric{
+  font-size: 1rem;
+}
+.change-metric a{
+  color: white;
+  text-decoration: none;
+}
+
+.image{
+  height: 200px;
+}
+#image{
+   /* width: 100%; */
+   height: 100%;
+} 
 #bottom{
   display: flex;
   min-height: 30vh;

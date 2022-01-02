@@ -1,12 +1,22 @@
-const renderText = (text,divReference) => {
-  const node = document.querySelector(divReference);
+const renderText = (text, divReference) => {
+  let node;
+  if (typeof divReference === 'string') {
+    node = document.querySelector(divReference);
+  } else {
+    node = divReference;
+  }
   node.textContent = text;
   return node;
 };
 
-const renderImage = (code,divReference) => {
-  const node = document.querySelector(divReference);
-  node.src = `http://openweathermap.org/img/w/${code}.png`;
+const renderImage = (code, divReference) => {
+  let node;
+  if (typeof divReference === 'string') {
+    node = document.querySelector(divReference);
+  } else {
+    node = divReference;
+  }
+  node.src = `http://openweathermap.org/img/wn/${code}@2x.png`;
   return node;
 };
 export { renderText, renderImage };
