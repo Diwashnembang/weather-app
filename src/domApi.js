@@ -16,7 +16,7 @@ const renderImage = (code, divReference) => {
   } else {
     node = divReference;
   }
-  node.src = `http://openweathermap.org/img/wn/${code}@2x.png`;
+  node.src = `http://openweathermap.org/img/wn/${code}@2x.PNG`;
   return node;
 };
 export { renderText, renderImage };
