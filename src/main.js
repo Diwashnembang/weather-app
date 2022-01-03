@@ -9,7 +9,7 @@ const moment = require('moment-timezone');
 let metric = true;
 
 function capitalize(sentence) {
-  if (typeof sentence !== 'string') return console.log('error');
+  if (typeof sentence !== 'string') return ('error');
   let capitalizeSentence = '';
   const temp = sentence.split(' ');
   for (let i = 0; i < temp.length; i += 1) {
@@ -19,7 +19,6 @@ function capitalize(sentence) {
   for (let i = 0; i < temp.length; i += 1) {
     capitalizeSentence = `${incompleteSentence} ${temp[i]}`;
     incompleteSentence = capitalizeSentence;
-    console.log(capitalizeSentence);
   }
   return capitalizeSentence;
 }
@@ -69,7 +68,7 @@ async function main(location) {
     weeklyForecastDiv.forEach((day) => {
       renderText(`${removePoint(oneCallData.daily[index].temp.max)} ${unit.temperature}`, day);
       const icon = Array.from(day.nextElementSibling.children);
-      // console.log(oneCallData.current.weather[0].icon)
+      //  (oneCallData.current.weather[0].icon)
       renderImage(`${oneCallData.daily[index].weather[0].icon}`, icon[0]);
       index += 1;
     });
@@ -78,7 +77,7 @@ async function main(location) {
     renderText('City Not Found!!', '.error-message');
     const div = document.querySelector('.error-message');
     div.classList.add('error-animation');
-    console.log(e);
+    (e);
   }
 
   // todo: add css and search function

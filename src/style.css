@@ -38,6 +38,13 @@ main{
     justify-content: space-between;
     min-height: 55vh;
 
+    
+
+}
+
+#right{
+  width: 75vh;
+
 }
 .description{
   font-size: 2.3rem;
@@ -75,6 +82,12 @@ main{
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
+
+}
+
+.search{
+  width: 100%;
+ 
 }
 .search-city{
  display: flex;
@@ -82,7 +95,8 @@ main{
  justify-content: space-evenly;
  border-bottom: white solid 2px;
  border-radius: 0.1rem;
- width: 15vw;
+ max-width: 50%;
+ min-width: 200px;
 
 }
 
@@ -183,6 +197,124 @@ input:focus{
 
 }
 
+
 .humidity-data,.feels-like-data,.wind-speed-data{
   font-size: 1.5rem;
+}
+
+
+@media (max-width:990px) and (min-width:764px) {
+
+  main,aside{
+  padding: 5rem 2rem 0rem 2rem;
+}
+.font{
+  font-size: 0.8rem;
+}
+.bigfont{
+  font-size: 2rem;
+}
+
+.day{
+  font-size: 1rem;
+}
+
+
+  .feels-like-icon,.humidity-icon,.wind-speed-icon{
+    width: 2rem;
+  height: 2rem;
+  }
+
+  /* #image{
+    width: 50%;
+    height: 50%;
+  } */
+
+  .feels-like-data,.humidity-data,.wind-speed-data{
+    font-size: 1rem;
+  }
+
+  .day-forecast{
+    padding-top: 0.5rem;
+  }
+
+}
+
+@media (max-width:763px) {
+
+  main,aside{
+  padding: 1rem 1rem 0rem 1rem;
+}
+.font{
+  font-size: 0.5rem;
+}
+.bigfont ,.title{
+  font-size: 1rem;
+}
+
+.day{
+  font-size: 0.8rem;
+  width: 10px;
+}
+
+
+  .feels-like-icon,.humidity-icon,.wind-speed-icon{
+    width: 1.5rem;
+  height: 1.5rem;
+  }
+.forecast-image img{
+    height: 50%;
+    width: 50%;
+
+}
+
+
+  .feels-like-data,.humidity-data,.wind-speed-data{
+    font-size: 0.8rem;
+  }
+
+  .day-forecast{
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  #bottom{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .weekly-forecast{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+
+   
+    
+  }
+
+  .weekly-data{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  
+        margin-left: 8rem;
+
+  }
+
+  .forecast-image{
+    text-align: center;
+  }
+  
+
+  aside{
+    width: 100%;
+  
+    justify-content: center;
+  }
+
+  input{
+    font-size: 1rem;
+  }
+
 }

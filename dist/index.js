@@ -43,7 +43,7 @@ function _currentWeather() {
           case 0:
             _context2.prev = 0;
             city = place || 'kathmandu';
-            console.log(city);
+             (city);
             _context2.next = 5;
             return fetch("https://api.openweathermap.org/data/2.5/weather?q=".concat(city, "&appid=78650a89fccd93f56814e9bef59802c3&fbclid=IwAR1gF3TXvgxoZgQqpoFFvRonBMUCvehGb1JoI5obR3Qqx8Lt1cLjPxwclcQ"), {
               mode: 'cors',
@@ -62,7 +62,7 @@ function _currentWeather() {
           case 12:
             _context2.prev = 12;
             _context2.t0 = _context2["catch"](0);
-            console.log(_context2.t0);
+             (_context2.t0);
             return _context2.abrupt("return", _context2.t0);
 
           case 16:
@@ -93,19 +93,19 @@ var oneCall = /*#__PURE__*/function () {
 
           case 5:
             response = _context.sent;
-            console.log(response);
+             (response);
             _context.next = 9;
             return response.json();
 
           case 9:
             data = _context.sent;
-            console.log(data);
+             (data);
             return _context.abrupt("return", data);
 
           case 14:
             _context.prev = 14;
             _context.t0 = _context["catch"](0);
-            console.log(_context.t0);
+             (_context.t0);
             return _context.abrupt("return", _context.t0);
 
           case 18:
@@ -172,7 +172,7 @@ var hideDiv = function hideDiv(refernece) {
 
 var unhideDiv = function unhideDiv(refernece) {
   var div = document.querySelector(refernece);
-  console.log(div);
+   (div);
   div.classList.remove('hidden');
 };
 
@@ -23956,7 +23956,7 @@ var moment = __webpack_require__(/*! moment-timezone */ "./node_modules/moment-t
 var metric = true;
 
 function capitalize(sentence) {
-  if (typeof sentence !== 'string') return console.log('error');
+  if (typeof sentence !== 'string') return  ('error');
   var capitalizeSentence = '';
   var temp = sentence.split(' ');
 
@@ -23969,7 +23969,7 @@ function capitalize(sentence) {
   for (var _i = 0; _i < temp.length; _i += 1) {
     capitalizeSentence = "".concat(incompleteSentence, " ").concat(temp[_i]);
     incompleteSentence = capitalizeSentence;
-    console.log(capitalizeSentence);
+     (capitalizeSentence);
   }
 
   return capitalizeSentence;
@@ -24033,7 +24033,7 @@ function _main() {
             index = 0;
             weeklyForecastDiv.forEach(function (day) {
               (0,_domApi__WEBPACK_IMPORTED_MODULE_3__.renderText)("".concat(removePoint(oneCallData.daily[index].temp.max), " ").concat(unit.temperature), day);
-              var icon = Array.from(day.nextElementSibling.children); // console.log(oneCallData.current.weather[0].icon)
+              var icon = Array.from(day.nextElementSibling.children); //  (oneCallData.current.weather[0].icon)
 
               (0,_domApi__WEBPACK_IMPORTED_MODULE_3__.renderImage)("".concat(oneCallData.daily[index].weather[0].icon), icon[0]);
               index += 1;
@@ -24048,7 +24048,7 @@ function _main() {
             (0,_domApi__WEBPACK_IMPORTED_MODULE_3__.renderText)('City Not Found!!', '.error-message');
             div = document.querySelector('.error-message');
             div.classList.add('error-animation');
-            console.log(_context2.t0);
+             (_context2.t0);
 
           case 29:
           case "end":

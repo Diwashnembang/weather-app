@@ -26,7 +26,6 @@ const hideDiv = (refernece) => {
 };
 const unhideDiv = (refernece) => {
   const div = document.querySelector(refernece);
-  console.log(div)
   div.classList.remove('hidden');
 };
 export {
